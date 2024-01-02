@@ -1,0 +1,89 @@
+input[readonly] {
+    color: #666;
+    /* 文本颜色为灰色 */
+    background-color: #f4f4f4;
+    /* 背景颜色为浅灰色 */
+}
+
+h1, h2, h3, h4, h5, h6 ,label{
+    color: #542bfa9f;
+    margin: 10px 0;
+}
+
+.textareaStyle{
+    color: #fffefe;
+    background-color: #c0e391;
+    border-color: #b5e378;
+    box-sizing: border-box;
+    color: #8f8f8f;
+    background-color: #fcfcfc;
+    border-color: #c0b0ff;
+    cursor: pointer;
+    background-image: none;
+    border-radius: 4px;
+    line-height: 1.5;
+}
+
+.inputtext {
+    vertical-align: top;
+    /* 上对齐 */
+    overflow-y: auto;
+    resize: vertical;
+    display: block;
+    padding: 5px;
+    text-align: left;
+    color: #fffefe;
+    background-color: #c0e391;
+    border-color: #b5e378;
+    position: relative;
+    display: inline-block;
+    padding: 6px 15px;
+    font-weight: 400;
+    font-size: 14px;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    white-space: nowrap;
+    line-height: 1.5;
+    user-select: none;
+    transition: color .3s ease,background-color .3s ease,border .3s ease;
+    box-sizing: border-box;
+    color: #8f8f8f;
+    background-color: #fcfcfc;
+    border-color: #c0b0ff;
+}
+
+body {
+    position: fixed;
+    background: #C0B0FF;
+    color: #fffefe;
+}
+
+button {
+    color: #fffefe;
+    background-color: #c0e391;
+    border-color: #b5e378;
+    position: relative;
+    display: inline-block;
+    padding: 6px 15px;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    white-space: nowrap;
+    line-height: 1.5;
+    user-select: none;
+    transition: color .3s ease,background-color .3s ease,border .3s ease;
+    box-sizing: border-box;
+    color: #8f8f8f;
+    background-color: #fcfcfc;
+    border-color: #c0b0ff;
+}

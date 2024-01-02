@@ -1,56 +1,33 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>API调用</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+  <link rel="stylesheet" href="css/StringSend.css">
 </head>
+
 <body>
   <h1>API调用</h1>
   <label for="apiUrl">API地址：</label>
-  <input type="text" id="apiUrl" size="30" value="localhost"><br><br>
+  <input class="inputtext" type="text" id="apiUrl" size="10" readonly><br><br>
   <label for="apiPort">API端口号：</label>
-  <input type="text" id="apiPort" size="5" value="26306"><br><br>
+  <input class="inputtext" type="text" id="apiPort" size="2" value="26306" readonly><br><br>
+  <input type="checkbox" id="checkbox"> 手动输入地址及端口号<br><br>
   <label for="apiString">信息类型：</label>
-  <select id="apiString">
+  <select class="inputtext" id="apiString">
     <option value="update-string?newString">newString</option>
   </select><br><br>
-  <label for="apiParam">内容：</label>
-  <input type="text" id="apiParam" size="30" width="40"><br><br>
-  <button onclick="callAPI()">发送文字</button>
-  <button onclick="empty()">清空文字</button>
-  <br>
-  <div id="response"></div>
+  <label for="apiParam">内容：</label><br>
+  <textarea class="textareaStyle" type="text" id="apiParam" cols="30" rows="10"></textarea><br><br>
+  <button onclick="callAPI()">发送</button>
+  <button onclick="empty()">清空</button>
+  <button onclick="clearTextarea()">清除</button>
+  <br><br>
+  <div class="textareaStyle" id="response"></div>
 
-  <script>
-    function callAPI() {
-      var apiUrl = document.getElementById('apiUrl').value;
-      var apiPort = document.getElementById('apiPort').value;
-      var apiString = document.getElementById('apiString').value;
-      var apiParam = document.getElementById('apiParam').value;
-      var fullUrl = 'http://' + apiUrl + ':' + apiPort +'/api/' + apiString + '=' + apiParam;
-
-      fetch(fullUrl)
-        .then(response => response.json())
-        .then(data => {
-          document.getElementById('response').innerText = JSON.stringify(data, null, 2);
-        })
-        .catch(error => {
-          document.getElementById('response').innerText = '发生错误：' + error;
-        });
-    }
-
-    function empty(){
-        var apiUrl = document.getElementById('apiUrl').value;
-        var apiPort = document.getElementById('apiPort').value;
-        var emptyUrl = 'http://' + apiUrl + ':' + apiPort +'/api/empty-string'
-        fetch(emptyUrl)
-        .then(response => response.json())
-        .then(data => {
-          document.getElementById('response').innerText = JSON.stringify(data, null, 2);
-        })
-        .catch(error => {
-          document.getElementById('response').innerText = '发生错误：' + error;
-        });
-    }
-  </script>
+  <script src="js/StringSend.js"></script>
 </body>
+
 </html>
