@@ -1,0 +1,22 @@
+{
+  "name": "clivelink",
+  "version": "1.0.0",
+  "description": "for every streamer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CHonesetDoPa/CliveLink.git"
+  },
+  "keywords": [
+    "live"
+  ],
+  "author": "CH",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/CHonesetDoPa/CliveLink/issues"
+  },
+  "homepage": "https://github.com/CHonesetDoPa/CliveLink#readme"
+}
