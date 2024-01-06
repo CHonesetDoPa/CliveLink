@@ -50,7 +50,7 @@ app.get('/api/empty-string', (req, res) => {
   res.json({ message: 'String emptied' });
 });
 
-// 提供静态文件（如前端代码）
+// 提供静态文件
 app.use(express.static(path.join(__dirname, 'public')));
 
 // 启动服务器

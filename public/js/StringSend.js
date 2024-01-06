@@ -1,14 +1,11 @@
-// 获取当前URL的主机部分并设置为apiUrl的默认值
+// 获取当前URL的主机部分，设置默认地址和端口
 window.onload = function () {
   var currentUrl = window.location.href;
   var url = new URL(currentUrl);
   var host = url.hostname;
-  document.getElementById('apiUrl').value = host;
-  // 获取地址栏中的端口部分
   var port = url.port;
-  // 设置输入框的默认内容为端口部分
+  document.getElementById('apiUrl').value = host;
   document.getElementById('apiPort').value = port;
-
 }
 
 function callAPI() {
