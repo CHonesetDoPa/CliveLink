@@ -6,6 +6,17 @@ window.onload = function () {
   var port = url.port;
   document.getElementById('apiUrl').value = host;
   document.getElementById('apiPort').value = port;
+  connectionTest = '/api/connection-test';
+  fetch(connectionTest)
+    .then(response => response.json())
+    .then(data => {
+      var responseData = JSON.stringify(data, null, 2);
+      responseData = responseData.substring(1, responseData.length - 1);
+      document.getElementById('response').innerText = '响应:' + responseData;
+    })
+    .catch(error => {
+      document.getElementById('response').innerText = '发生错误：' + error;
+    });
 }
 
 function callAPI() {
@@ -18,7 +29,9 @@ function callAPI() {
   fetch(fullUrl)
     .then(response => response.json())
     .then(data => {
-      document.getElementById('response').innerText = JSON.stringify(data, null, 2);
+      var responseData = JSON.stringify(data, null, 2);
+      responseData = responseData.substring(1, responseData.length - 1);
+      document.getElementById('response').innerText = '内容:\n' + apiParam + '\n响应:' + responseData;
     })
     .catch(error => {
       document.getElementById('response').innerText = '发生错误：' + error;
@@ -32,7 +45,9 @@ function empty() {
   fetch(emptyUrl)
     .then(response => response.json())
     .then(data => {
-      document.getElementById('response').innerText = JSON.stringify(data, null, 2);
+      var responseData = JSON.stringify(data, null, 2);
+      responseData = responseData.substring(1, responseData.length - 1);
+      document.getElementById('response').innerText = '响应:' + responseData;
     })
     .catch(error => {
       document.getElementById('response').innerText = '发生错误：' + error;
