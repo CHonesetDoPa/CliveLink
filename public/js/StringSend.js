@@ -24,14 +24,15 @@ function callAPI() {
   var apiPort = document.getElementById('apiPort').value;
   var apiString = document.getElementById('apiString').value;
   var apiParam = document.getElementById('apiParam').value;
-  var fullUrl = 'http://' + apiUrl + ':' + apiPort + '/api/' + apiString + '=' + apiParam;
+  var encodedParam = encodeURIComponent(apiParam);
+  var fullUrl = 'http://' + apiUrl + ':' + apiPort + '/api/' + apiString + '=' + encodedParam;
 
   fetch(fullUrl)
     .then(response => response.json())
     .then(data => {
       var responseData = JSON.stringify(data, null, 2);
       responseData = responseData.substring(1, responseData.length - 1);
-      document.getElementById('response').innerText = '内容:\n' + apiParam + '\n响应:' + responseData;
+      document.getElementById('response').innerText = '内容:\n' + apiParam + '\n\n响应:' + responseData;
     })
     .catch(error => {
       document.getElementById('response').innerText = '发生错误：' + error;

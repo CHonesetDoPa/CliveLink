@@ -16,7 +16,7 @@ const ws = new WebSocket('ws://localhost:3000');
           container.textContent = ''; // 清空之前的内容
         }
         let index = 0;
-        const speed = 100; // 设置打印速度，单位为毫秒
+        const speed = 50; // 设置打印速度，单位为毫秒
         const totalDuration = receivedString.length * speed; // 总的打印时间
         const startTime = performance.now(); // 记录开始时间
         intervalId = setInterval(function() {
