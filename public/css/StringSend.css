@@ -34,8 +34,6 @@ label {
 }
 
 .inputtext {
-    vertical-align: top;
-    /* 上对齐 */
     overflow-y: auto;
     resize: vertical;
     display: block;
@@ -49,7 +47,6 @@ label {
     padding: 6px 15px;
     font-weight: 400;
     font-size: 14px;
-    vertical-align: middle;
     touch-action: manipulation;
     cursor: pointer;
     background-image: none;
