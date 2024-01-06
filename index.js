@@ -41,7 +41,7 @@ app.get('/api/update-string', (req, res) => {
         const currentTime = new Date();
         // 格式化时间
         const formattedTime = formatTime(currentTime);
-        console.log(formattedTime, 'String:', newString);
+        console.log(formattedTime,'[CliveLink]', 'String:', newString);
       }
     });
 
@@ -52,7 +52,7 @@ app.get('/api/update-string', (req, res) => {
     const currentTime = new Date();
     // 格式化时间
     const formattedTime = formatTime(currentTime);
-    console.log(formattedTime, 'Error:New string is required');
+    console.log(formattedTime, '[CliveLink]','Error:New string is required');
   }
 });
 
@@ -69,8 +69,8 @@ app.get('/api/connection-test', (req, res) => {
         // 格式化时间
         const formattedTime = formatTime(currentTime);
         const userAgent = req.get('User-Agent');
-        console.log(formattedTime, 'Command:Device Connected');
-        console.log(formattedTime, 'Device Info:',userAgent);
+        console.log(formattedTime, '[CliveLink]','Command:Device Connected');
+        console.log(formattedTime, '[CliveLink]','Device Info:',userAgent);
       }
     });
 
@@ -91,7 +91,7 @@ app.get('/api/empty-string', (req, res) => {
       const currentTime = new Date();
       // 格式化时间
       const formattedTime = formatTime(currentTime);
-      console.log(formattedTime, 'Command:Clear');
+      console.log(formattedTime, '[CliveLink]','Command:Clear');
     }
   });
 
