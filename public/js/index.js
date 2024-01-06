@@ -1,4 +1,11 @@
-const ws = new WebSocket('ws://localhost:26306');
+// 检测用户代理中是否包含 "Mobile" 或 "Android" 关键词
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  // 如果是手机设备，进行页面跳转
+  window.location.href = 'StringSend.html';
+}
+
+
+const ws = new WebSocket('ws://localhost:3000');
       let intervalId;
 
       ws.onmessage = function(event) {

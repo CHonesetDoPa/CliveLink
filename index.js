@@ -54,7 +54,7 @@ app.get('/api/empty-string', (req, res) => {
 app.use(express.static(path.join(__dirname, 'public')));
 
 // 启动服务器
-const PORT = process.env.PORT || 26306;
+const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

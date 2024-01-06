@@ -4,6 +4,11 @@ window.onload = function () {
   var url = new URL(currentUrl);
   var host = url.hostname;
   document.getElementById('apiUrl').value = host;
+  // 获取地址栏中的端口部分
+  var port = url.port;
+  // 设置输入框的默认内容为端口部分
+  document.getElementById('apiPort').value = port;
+
 }
 
 function callAPI() {
